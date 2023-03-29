@@ -1,0 +1,4 @@
+coverage/
+lib/
+types/
+jest.config.js

@@ -1,0 +1,43 @@
+@import '../../../variables';
+
+.address-balance {
+    padding: 10px 15px 0;
+
+    .title-box {
+        display: flex;
+        align-items: center;
+
+        .title {
+            opacity: 0.5;
+        }
+    }
+
+    .amount-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .balance-box {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+        }
+
+        .token-balance {
+            font-weight: $bold-font-weight;
+            font-size: $big-font-size;
+            line-height: 42px;
+        }
+
+        .amount-usd {
+            font-weight: $light-font-weight;
+            font-size: 17px;
+            line-height: 45px;
+            display: flex;
+            align-items: center;
+            text-align: right;
+            color: $white;
+            opacity: 0.5;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@import '../../../variables';
+
+.asset-balance {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 150px;
+
+    .balance {
+        color: $highlighted-text;
+        font-weight: $bold-font-weight;
+        line-height: 22px;
+
+        @media (max-width: $medium-screen-size) {
+            font-size: $smaller-font-size;
+            line-height: normal;
+        }
+
+        span {
+            margin-left: 5px;
+        }
+    }
+
+    .balance-value {
+        span {
+            color: #aeaeae;
+            font-weight: $light-font-weight;
+
+            @media (max-width: $medium-screen-size) {
+                font-size: $smaller-font-size;
+            }
+        }
+    }
+}

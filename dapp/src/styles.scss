@@ -1,0 +1,325 @@
+@import 'variables';
+@import '~react-notifications-component/dist/scss/notification';
+@import './mixins.scss';
+
+/* inter-regular - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: $light-font-weight;
+    src: local(''),
+        url('../public/fonts/Inter/inter-v7-latin-regular.woff2')
+            format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('../public/fonts/Inter/inter-v7-latin-regular.woff')
+            format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* inter-500 - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: $normal-font-weight;
+    src: local(''),
+        url('../public/fonts/Inter/inter-v7-latin-500.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('../public/fonts/Inter/inter-v7-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* inter-600 - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: $semi-normal-font-weight;
+    src: local(''),
+        url('../public/fonts/Inter/inter-v7-latin-600.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('../public/fonts/Inter/inter-v7-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* inter-700 - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: $semi-bold-font-weight;
+    src: local(''),
+        url('../public/fonts/Inter/inter-v7-latin-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('../public/fonts/Inter/inter-v7-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* inter-800 - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: $bold-font-weight;
+    src: local(''),
+        url('../public/fonts/Inter/inter-v7-latin-800.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('../public/fonts/Inter/inter-v7-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.MuiCard-root {
+    padding: 16px;
+    color: $white !important;
+}
+
+.App-logo {
+    height: 5vmin;
+    pointer-events: none;
+}
+
+.App {
+    display: block;
+    text-align: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+.list {
+    background-color: $white;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+@media (min-width: $medium-screen-size) {
+    .container {
+        max-width: 1300px;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: revert;
+    }
+    .selected-container {
+        box-sizing: border-box;
+        padding: 16px;
+        height: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: $dark-blue;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: $white;
+}
+
+a {
+    text-decoration: none;
+
+    font-size: $title-font-size;
+    font-weight: $light-font-weight;
+    color: $grey-text;
+    cursor: pointer;
+    padding-left: 10px;
+
+    &:hover {
+        color: $white;
+    }
+}
+.tooltip-style {
+    a {
+        text-decoration: underline;
+        font-size: inherit;
+        cursor: pointer;
+        padding-left: 2px;
+        color: inherit;
+    }
+}
+
+.App-link {
+    color: $link-color;
+}
+
+.subtitle {
+    font-size: $title-font-size !important;
+    font-weight: $bold-font-weight;
+    line-height: 42px;
+    letter-spacing: 0;
+    text-align: left;
+}
+
+.balance-value {
+    font-weight: bold !important;
+}
+
+.big-number {
+    font-weight: $bold-font-weight !important;
+    font-size: $large-font-size !important;
+    margin-inline-end: 8px !important;
+}
+
+.subtitle-light {
+    color: $light-gray;
+    font-size: $small-font-size !important;
+    margin-inline-end: 16px !important;
+    line-height: 30px !important;
+}
+
+.secondary-dark {
+    color: $white;
+    opacity: 0.5;
+    font-weight: $semi-bold-font-weight;
+}
+
+.full-width-btn {
+    width: 100%;
+    color: $white !important;
+    border: 1.5px solid $border-button !important;
+    text-transform: capitalize !important;
+    border-radius: 8px !important;
+    height: 43.5px;
+    padding: 4px 8px !important;
+}
+
+.subtitle-summary {
+    color: $white;
+    font-weight: $semi-bold-font-weight;
+}
+
+.warning-box {
+    text-align: start;
+    margin-top: 32px;
+    margin-bottom: 0;
+    border: 1px solid $warning-box;
+    height: auto;
+    background-image: $warning-box-background;
+    padding: 16px;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-container {
+    align-items: flex-start;
+    margin-top: 32px !important;
+}
+
+.warning-box .MuiSvgIcon-root {
+    fill: yellow;
+    margin-inline-end: 8px;
+    margin-bottom: 20px;
+}
+
+.error-outline {
+    margin-left: 4px;
+    margin-top: 5px;
+}
+
+#price-unit {
+    color: $price-unit !important;
+    font-size: $small-font-size;
+}
+
+.MuiTable-root {
+    border-collapse: separate !important;
+    border-spacing: 0 12px !important;
+}
+
+.MuiTableRow-head th {
+    font-weight: $normal-font-weight;
+    font-size: $small-font-size;
+    color: $white;
+    opacity: 0.5;
+}
+
+.MuiTableCell-root {
+    border-bottom: none !important;
+    color: $white !important;
+    font-weight: $normal-font-weight;
+    font-size: $normal-font-size;
+}
+
+.MuiTableBody-root .MuiTableRow-root {
+    border-radius: 8px;
+}
+
+.MuiTableBody-root .MuiTableRow-root .MuiTableCell-root:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+.MuiTableBody-root .MuiTableRow-root .MuiTableCell-root:last-child {
+    border-radius: 0px 10px 10px 0;
+}
+
+.MuiTable-root .btn {
+    color: $white;
+    background: $second-blue;
+    border-radius: 6px;
+    text-transform: capitalize;
+    width: 116px;
+    height: 35px;
+    font-size: $tiny-font-size !important;
+
+    &:hover {
+        background: $second-blue;
+    }
+}
+
+.MuiTable-root .disable.btn {
+    color: $white;
+    background: $table-background;
+}
+
+@media (max-width: 680px) {
+    .css-1umk77v {
+        flex-direction: column;
+        height: auto !important;
+    }
+
+    .css-69i1ev {
+        flex-direction: column;
+    }
+}
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rnc__notification-item--info {
+    background-color: $grey-btn;
+    border-left: 8px solid $cube;
+}
+
+.rnc__notification-item--info .rnc__notification-close-mark {
+    background-color: $grey-btn;
+}
+.bold-beige {
+    color: $color-beige !important;
+}
+
+@include styled-scroll-bar;

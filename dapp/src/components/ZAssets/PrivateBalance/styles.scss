@@ -1,0 +1,174 @@
+@import '../../../variables';
+
+$balance-container-box-shadow: 0px 3.58957px 13.4609px rgba(0, 0, 0, 0.25);
+$balance-container-border: 1px solid rgba(102, 141, 198, 0.4);
+$refresh-button-background: linear-gradient(
+        180deg,
+        rgba(152, 195, 245, 0.05) 0%,
+        rgba(152, 195, 245, 0) 72%
+    ),
+    rgba(164, 183, 219, 0.1);
+
+.private-zAssets-balance-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(47, 53, 83, 1);
+    border: $balance-container-border;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 40px;
+    backdrop-filter: blur(1000px);
+    border-radius: 15px;
+    box-shadow: $balance-container-box-shadow;
+
+    @media (max-width: $medium-screen-size) {
+        flex-direction: column;
+        padding: 20px 19px;
+        background-color: rgb(32, 33, 60);
+    }
+
+    @media (max-width: $small-screen-size) {
+        z-index: 1000;
+        border-radius: 22px;
+    }
+
+    .private-zAssets-balance {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+
+        @media (max-width: $medium-screen-size) {
+            align-items: center;
+        }
+
+        .title {
+            font-style: normal;
+            font-weight: $light-font-weight;
+            font-size: $title-font-size;
+            line-height: 42px;
+            display: flex;
+            align-items: center;
+            color: $white;
+            opacity: 0.6;
+
+            @media (max-width: $medium-screen-size) {
+                font-size: $normal-font-size;
+                line-height: normal;
+            }
+        }
+
+        .amount {
+            display: flex;
+            align-items: center;
+            place-items: baseline;
+            color: $white;
+            font-weight: $bold-font-weight;
+            .whole {
+                font-size: $huge-font-size - 1;
+
+                @media (max-width: $medium-screen-size) {
+                    font-size: 34px;
+                }
+            }
+
+            .substring {
+                font-size: $bigger-font-size;
+            }
+        }
+
+        .zkp-rewards {
+            font-style: normal;
+            font-weight: $semi-bold-font-weight;
+            font-size: $title-font-size;
+            line-height: 42px;
+            display: flex;
+            align-items: center;
+            color: $white;
+
+            @media (max-width: $medium-screen-size) {
+                font-size: $normal-font-size;
+                line-height: unset;
+                align-items: baseline;
+            }
+
+            .info {
+                font-weight: $light-font-weight;
+                margin-left: 5px;
+
+                @media (max-width: $medium-screen-size) {
+                    margin-left: 4px;
+                }
+            }
+
+            .tooltip-icon {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .private-zAssets-refresh {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        @media (max-width: $small-screen-size) {
+            margin-top: 8px;
+        }
+
+        .refresh-button {
+            margin: 10px 0px;
+            width: 250px;
+            height: 50px;
+            background: linear-gradient(
+                    180deg,
+                    rgba(152, 195, 245, 0.05) 0%,
+                    rgba(152, 195, 245, 0) 72%
+                ),
+                rgba(164, 183, 219, 0.1);
+            mix-blend-mode: normal;
+            box-shadow: 0px 3.58957px 13.4609px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(71.7913px);
+            text-transform: capitalize;
+            border-radius: 10px;
+            line-height: 42px;
+            color: $white;
+            font-weight: $light-font-weight;
+            font-size: 15px;
+
+            @media (max-width: $tiny-screen-size) {
+                width: 100%;
+                line-height: normal;
+            }
+        }
+
+        .spin-icon {
+            width: 15px !important;
+            height: 15px !important;
+            margin-right: 10px;
+        }
+
+        .last-sync {
+            font-weight: $normal-font-weight;
+            font-size: $smaller-font-size;
+            line-height: 17px;
+            display: flex;
+            align-items: center;
+            color: $white;
+            opacity: 0.4;
+
+            span {
+                padding-right: 10px;
+            }
+
+            .tooltip-icon {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.tooltip-main-text {
+    margin-bottom: 0;
+}

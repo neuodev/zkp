@@ -1,0 +1,25 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+artifacts/
+build/
+cache/
+coverage/
+coverage.json
+dist/
+node_modules/
+tmp/
+typechain/
+typing/
+
+.env
+.env.*
+!.env.example
+*.log
+*.tsbuildinfo
+yarn-debug.log*
+yarn-error.log*
+crypto/lib
+crypto/types/
+
+/.idea
+.vscode
+.DS_Store

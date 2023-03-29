@@ -1,0 +1,62 @@
+@import '../../../variables';
+
+.unstaking-info-container {
+    background: $card-background !important;
+    border-radius: 10px !important;
+
+    .unstaking-info-card-content {
+        padding: 0px !important;
+    }
+
+    .unstaking-info-title {
+        font-weight: $bold-font-weight;
+        font-size: $title-font-size;
+        line-height: 42px;
+        display: flex;
+        align-items: center;
+        color: $color-beige;
+        /* FIXME: use common variable */
+
+        @media (max-width: $medium-screen-size) {
+            font-size: $small-font-size;
+        }
+    }
+
+    .unstaking-info-text {
+        font-size: $normal-font-size;
+        line-height: 25px;
+        color: white;
+        opacity: 0.8;
+        padding: 5px 0;
+        text-align: start;
+
+        @media (max-width: $medium-screen-size) {
+            font-size: $tiny-font-size;
+        }
+
+        strong {
+            opacity: 1;
+        }
+
+        a {
+            padding: 0;
+        }
+    }
+
+    .unstaking-info-link {
+        color: white;
+        text-decoration: underline;
+        @media (max-width: $medium-screen-size) {
+            font-size: $tiny-font-size;
+            padding-left: 0;
+        }
+    }
+
+    .unstaking-info-message {
+        text-align: center;
+        padding: 16px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        background-color: $card-background-darker;
+    }
+}

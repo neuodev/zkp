@@ -1,0 +1,52 @@
+@import '../../../variables';
+
+.total-balance {
+    background: rgba(61, 62, 86, 1);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    padding: 12px 14px 10px 16px;
+    backdrop-filter: blur(147px);
+    margin-bottom: 15px;
+
+    .title-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            opacity: 0.8;
+        }
+
+        .spin-icon {
+            color: $white;
+            width: 15px !important;
+            height: 15px !important;
+        }
+
+        .refresh-button {
+            position: absolute;
+            top: 4px;
+            right: 3px;
+        }
+    }
+
+    .amount-box {
+        display: flex;
+        align-items: baseline;
+        .splitted-balance {
+            font-weight: $bold-font-weight;
+            .whole {
+                font-size: 34px;
+            }
+
+            .substring {
+                font-size: $bigger-font-size - 1;
+            }
+        }
+
+        .token-market-price {
+            font-size: $normal-font-size;
+            opacity: 0.8;
+        }
+    }
+}

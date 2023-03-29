@@ -1,0 +1,28 @@
+@import '../../../variables';
+
+.account-balance {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: $semi-normal-font-weight;
+    font-size: $normal-font-size;
+    line-height: 42px;
+    padding: 15px;
+    height: 40px;
+    width: 124px;
+    min-width: 115px;
+    background: rgba(52, 49, 81, 1);
+    border-radius: 8px;
+
+    .currency-symbol {
+        color: $muted-text;
+        font-weight: $light-font-weight;
+        color: $grey-text;
+    }
+
+    @media (max-width: 600px) {
+        margin: 0 5px;
+        font-size: 12px;
+    }
+}

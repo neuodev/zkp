@@ -1,0 +1,25 @@
+@import '../../variables';
+
+.assets-holder {
+    max-width: 75rem;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: $large-screen-size) {
+        width: auto;
+        padding: 0 16px;
+    }
+
+    .assets-container {
+        width: 83%;
+        max-width: inherit;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+
+        @media (max-width: $medium-screen-size) {
+            padding: 0;
+        }
+    }
+}

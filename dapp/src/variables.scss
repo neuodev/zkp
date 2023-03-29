@@ -1,0 +1,108 @@
+$transparent: transparent;
+$white: #ffffff;
+$light-gray: #e7e7e7;
+$price-unit: #f0ffff;
+$black: #191c1f;
+$highlighted-text: #ffdfbd;
+$grey-btn: #475267;
+$grey-btn-border: #485267;
+$dark-gray: #404a53;
+$muted-text: gray;
+$switch-back: #111420;
+$button-group-item: linear-gradient(0deg, #727b93, #727b93);
+$input-border: #acacc2;
+$input-disabled-color: #6c757e;
+$btn-blue: #205bea;
+$second-blue: #1e4eb4;
+$link-color: #61dafb;
+$btn-main: #02acd1;
+$dark-blue: #282c34;
+$wallet-options: #363c4b;
+$button-group: #373b46;
+$wallet-options-hover: #798192;
+$button-group-item: #3f4a5f;
+$selected-group: #727b93;
+$cube: #29303e;
+$asset-balance: rgba(150, 172, 214, 0.4);
+$selected-item-color: rgba(114, 123, 147, 1);
+$card-background: rgba(99, 114, 136, 0.15);
+$card-background-darker: rgba(99, 114, 136, 0.2);
+$asset-growth: #0eae00;
+$asset-fall: #d01111;
+$table-header-grey: #6c757e;
+$header-item: rgba(255, 255, 255, 0.1);
+$nav-grey: #394047;
+$nav-border: #191c1f;
+$report: #fa3c30;
+$progress: #fddcbc;
+$main-background: #0c121e;
+$main-text: #bbbbbb;
+$grey-text: rgba(255, 255, 255, 0.5);
+$semi-grey-text: rgba(255, 255, 255, 0.7);
+$buttons-holder-background-color: rgba(107, 155, 183, 0.2);
+$border-button: rgba(255, 255, 255, 0.36);
+$dropdown-border-color: rgba(102, 141, 198, 0.4);
+$warning-box: rgb(0 0 0 / 38%);
+$header-box-shadow: rgba(0, 0, 0, 0.1);
+$footer-link-color: #9eabc5;
+
+$color-beige: #ffdfbd;
+$third-blue: linear-gradient(0deg, #2b63eb, #2b63eb);
+$blue-linear: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.12) 0%,
+        rgba(255, 255, 255, 0) 100%
+    ),
+    #205bea;
+$table-background: linear-gradient(
+    0deg,
+    rgba(146, 159, 183, 0.35),
+    rgba(146, 159, 183, 0.35)
+);
+$navigation-background: linear-gradient(
+    0deg,
+    rgba(71, 82, 103, 0.1),
+    rgba(71, 82, 103, 0.1)
+);
+$dropdown-background: linear-gradient(
+    0deg,
+    rgba(75, 86, 107, 0.3),
+    rgba(75, 86, 107, 0.3)
+);
+
+$warning-box-background: linear-gradient(216deg, #0000007a, transparent);
+$toggle-button-group-color: linear-gradient(0deg, #3f4a5f, #3f4a5f);
+$assets-details-table-table-background: #161a32;
+
+// Font size
+$tiny-font-size: 12px;
+$smaller-font-size: 13px;
+$small-font-size: 14px;
+$normal-font-size: 16px;
+$title-font-size: 18px;
+$header-font-size: 20px;
+$big-font-size: 22px;
+$bigger-font-size: 25px;
+$large-font-size: 32px;
+$larger-font-size: 36px;
+$huge-font-size: 39px;
+
+// Font weight
+$light-font-weight: 400;
+$normal-font-weight: 500;
+$semi-normal-font-weight: 600;
+$semi-bold-font-weight: 700;
+$bold-font-weight: 800;
+
+// Media Query Screen Sizes
+
+$tiny-screen-size: 363px;
+$smaller-screen-size: 378px;
+$semi-smaller-screen-size: 400px;
+$small-screen-size: 468px;
+$semi-small-screen-size: 600px;
+$medium-screen-size: 768px;
+$semi-medium-screen-size: 800px;
+$semi-large-screen-size: 900px;
+$normal-screen-size: 1000px;
+$large-screen-size: 1080px;

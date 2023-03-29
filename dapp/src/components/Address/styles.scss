@@ -1,0 +1,44 @@
+@import '../../variables';
+
+.address-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    bottom: 10px;
+    position: relative;
+
+    @media (max-width: $normal-screen-size) {
+        position: relative;
+        bottom: 12px;
+    }
+
+    .user-avatar {
+        width: 34px;
+        height: 34px;
+        margin-left: 10px;
+        margin-top: 3px;
+
+        @media (max-width: $normal-screen-size) {
+            width: 20px;
+            height: 20px;
+            margin: 0;
+
+            > div {
+                width: 20px !important;
+                height: 20px !important;
+            }
+        }
+    }
+
+    .account-address {
+        font-size: $normal-font-size;
+        line-height: 48px;
+        margin: 0 10px 0 15px;
+
+        @media (max-width: $normal-screen-size) {
+            font-size: $small-font-size + 1;
+            margin: 0 10px;
+        }
+    }
+}

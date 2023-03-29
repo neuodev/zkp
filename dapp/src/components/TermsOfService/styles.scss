@@ -1,0 +1,11 @@
+@import '../../variables';
+
+.terms-of-service {
+    padding: 20px 80px;
+
+    a {
+        &:hover {
+            color: inherit;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@import '../../../variables';
+
+.staking-info-container {
+    padding: 0;
+
+    .staking-info-card-content {
+        padding: 0px !important;
+        .staking-info-title-wrapper {
+            display: flex;
+            align-items: center;
+            .warning-icon {
+                width: 17px;
+                height: 15px;
+                margin-right: 12px;
+            }
+            .stake-info-title {
+                font-weight: $semi-bold-font-weight;
+                font-size: $normal-font-size;
+                display: flex;
+                align-items: center;
+                color: $white;
+                /* FIXME: use common variable */
+
+                @media (max-width: $medium-screen-size) {
+                    font-size: $tiny-font-size;
+                }
+            }
+        }
+        .stake-info-text {
+            font-size: $small-font-size;
+            font-weight: $light-font-weight;
+            line-height: 22px;
+            color: $white;
+            opacity: 0.8;
+            padding: 5px 0;
+            text-align: start;
+
+            @media (max-width: $medium-screen-size) {
+                font-size: $tiny-font-size;
+            }
+
+            strong {
+                opacity: 1;
+            }
+
+            .learn-more-link {
+                text-decoration: underline;
+            }
+
+            .staking-info-text-paragraph {
+                margin-bottom: 10px;
+            }
+
+            a {
+                padding: 0;
+            }
+        }
+    }
+}

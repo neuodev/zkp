@@ -1,0 +1,43 @@
+@import '../../variables.scss';
+
+.main-page {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    flex: 1 1 auto;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 5px;
+    min-height: 100vh;
+    box-shadow: 1px 1px rgba(5, 6, 31, 1) inset;
+
+    &.isBlur {
+        flex-grow: 1;
+        filter: blur(4px);
+        -webkit-filter: blur(4px);
+    }
+
+    .header-container {
+        min-height: 10vh;
+        @media (max-width: $medium-screen-size) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .body-container {
+        min-height: 84vh;
+        padding-top: 100px;
+        padding-bottom: 10px;
+
+        @media (max-width: $medium-screen-size) {
+            padding-top: 0;
+        }
+    }
+
+    .footer-container {
+        min-height: 5vh;
+        @media (max-width: $medium-screen-size) {
+            margin-top: 80px;
+        }
+    }
+}

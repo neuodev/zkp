@@ -1,0 +1,88 @@
+@import '../../../variables';
+
+.expected-rewards-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    width: 100%;
+    background: transparent;
+
+    .MuiBox-root {
+        background-color: transparent;
+    }
+
+    .expected-rewards-card-title {
+        font-weight: $bold-font-weight;
+        font-size: $small-font-size;
+        padding: 0 0 13px 23px;
+        background: linear-gradient(92.53deg, $color-beige 0%, #d0a7a8 95.77%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        @media (max-width: $medium-screen-size) {
+            font-size: $tiny-font-size;
+            padding: 0 0 10px 16px;
+        }
+    }
+
+    .expected-rewards-card-container {
+        background: rgba(49, 57, 80, 1);
+        padding: 10px 23px;
+        border-radius: 10px;
+        flex-direction: column;
+        width: 100%;
+
+        @media (max-width: $medium-screen-size) {
+            border-radius: 14px;
+            padding: 10px 16px;
+        }
+
+        .expected-rewards-card-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .title {
+                font-weight: $normal-font-weight;
+                font-size: $normal-font-size;
+                line-height: 38px;
+                display: flex;
+                align-items: center;
+                background: $white;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+
+                @media (max-width: $medium-screen-size) {
+                    font-size: $tiny-font-size;
+                }
+
+                div {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .amount {
+                font-weight: $bold-font-weight;
+                font-size: $normal-font-size;
+                background: linear-gradient(
+                    92.53deg,
+                    $color-beige 0%,
+                    #d0a7a8 95.77%
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+        }
+    }
+}

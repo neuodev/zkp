@@ -1,0 +1,52 @@
+.modal-dialog {
+    .MuiPaper-root.MuiDialog-paper {
+        backdrop-filter: blur(1000px);
+        background: #151c2a;
+        border: 1px solid rgba(102, 141, 198, 0.4);
+        border-radius: 15px;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+        mix-blend-mode: normal;
+        padding: 15px 10px;
+    }
+
+    .modal-dialog-title {
+        color: $white;
+        display: flex;
+        font-size: 24px;
+        font-weight: $bold-font-weight;
+        justify-content: center;
+        line-height: 42px;
+        padding-bottom: 5px;
+    }
+
+    .modal-dialog-content-holder {
+        padding: 5px 60px;
+        text-align: center;
+
+        .modal-dialog-content {
+            font-size: $title-font-size;
+            line-height: 30px;
+            text-align: center;
+            color: $white;
+            margin-bottom: 40px;
+            padding-bottom: 5px;
+        }
+    }
+
+    .warning {
+        color: $highlighted-text;
+        font-weight: 900;
+        font-size: $header-font-size;
+        padding: 0px 3px;
+    }
+
+    .x-icon {
+        display: flex;
+        justify-content: end;
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
