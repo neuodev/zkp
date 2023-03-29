@@ -13,6 +13,8 @@ typing/
 .env
 .env.*
 !.env.example
+!.env.production
+!.env.test
 *.log
 *.tsbuildinfo
 yarn-debug.log*
