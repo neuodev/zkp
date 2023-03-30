@@ -3,7 +3,7 @@ name: Deploy Panther Protcol dApp
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
+    branches: ['master']
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -16,7 +16,7 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: true
 
 jobs:
@@ -29,17 +29,19 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: '16'
       - name: Install dependencies
         run: yarn
-      - name: Build the crypto module 
+      - name: Build the crypto module
         run: yarn build:crypto
       - name: Build required TS types
         run: yarn build:types
-      - name: Build smart contracts 
-        run:  HARDHAT_NO_MNEMONIC=yes yarn run build:contracts
-      - name: Build dApp 
+      - name: Build smart contracts
+        run: HARDHAT_NO_MNEMONIC=yes yarn run build:contracts
+      - name: Build dApp
         run: cp dapp/.env.production dapp/.env && yarn build:dapp
+      - name: Inject path
+        run: yarn inject-path:dapp
       - name: Upload artifact # required by actions/deploy-pages@v1
         uses: actions/upload-pages-artifact@v1
         with:

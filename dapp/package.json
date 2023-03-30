@@ -27,7 +27,8 @@
     "dotenv:sync": "yarn env:sync --file --write",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "inject-path": "yarn ts-node scripts/injectPath.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.6.0",
